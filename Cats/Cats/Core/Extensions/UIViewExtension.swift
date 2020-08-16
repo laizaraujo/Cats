@@ -1,5 +1,5 @@
 //
-//  ErrorResponse.swift
+//  UIViewExtension.swift
 //  Cats
 //
 //  Created by Laiza Souza on 15/08/20.
