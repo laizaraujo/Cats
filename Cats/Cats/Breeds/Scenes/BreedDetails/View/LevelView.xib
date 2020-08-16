@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="x1S-Gh-u0y" customClass="LevelView" customModule="Cats" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpk-dF-UHx">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
+                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="EuE-yQ-lU3"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3V-GW-UOD">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
+                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ieb-SR-cah"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dew-Db-kz9">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
+                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="gMS-lF-Npz"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-6u-RMp">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
+                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="WLS-4y-GqM"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sW5-zW-erS">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
+                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="0yy-yW-Rwg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="rLl-ZM-0Q3"/>
+            <connections>
+                <outletCollection property="levelViews" destination="tpk-dF-UHx" collectionClass="NSMutableArray" id="QVv-hH-Rk1"/>
+                <outletCollection property="levelViews" destination="a3V-GW-UOD" collectionClass="NSMutableArray" id="qID-5c-j48"/>
+                <outletCollection property="levelViews" destination="dew-Db-kz9" collectionClass="NSMutableArray" id="Bug-dM-jUl"/>
+                <outletCollection property="levelViews" destination="Ffj-6u-RMp" collectionClass="NSMutableArray" id="8QX-PL-KbG"/>
+                <outletCollection property="levelViews" destination="sW5-zW-erS" collectionClass="NSMutableArray" id="yB6-kW-4gG"/>
+            </connections>
+            <point key="canvasLocation" x="79.710144927536234" y="-41.517857142857139"/>
+        </stackView>
+    </objects>
+</document>
