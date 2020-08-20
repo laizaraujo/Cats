@@ -48,7 +48,7 @@ class BreedDetailView: UIView {
     func setLayout(breed: Breed) {
         if let imageURL = breed.getImageURL() {
             let placeholder = UIImage(named: "cat_placeholder") ?? UIImage()
-            let error = UIImage(named: "") ?? UIImage()
+            let error = UIImage(named: "error_placeholder") ?? UIImage()
             catImage.setImage(with: imageURL, placeholderImage: placeholder, errorImage: error)
         }
         
