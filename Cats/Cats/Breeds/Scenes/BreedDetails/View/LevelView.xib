@@ -13,37 +13,37 @@
             <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpk-dF-UHx">
-                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
-                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpk-dF-UHx">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                    <color key="backgroundColor" red="0.85098039215686272" green="0.87058823529411766" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="EuE-yQ-lU3"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3V-GW-UOD">
-                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
-                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3V-GW-UOD">
+                    <rect key="frame" x="40" y="0.0" width="40" height="20"/>
+                    <color key="backgroundColor" red="0.72549019607843135" green="0.75686274509803919" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="ieb-SR-cah"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dew-Db-kz9">
-                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
-                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dew-Db-kz9">
+                    <rect key="frame" x="80" y="0.0" width="40" height="20"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.22352941176470587" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="gMS-lF-Npz"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-6u-RMp">
-                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
-                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-6u-RMp">
+                    <rect key="frame" x="120" y="0.0" width="40" height="20"/>
+                    <color key="backgroundColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="WLS-4y-GqM"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sW5-zW-erS">
-                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
-                    <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sW5-zW-erS">
+                    <rect key="frame" x="160" y="0.0" width="40" height="20"/>
+                    <color key="backgroundColor" red="0.1381282539455912" green="0.14339444156518047" blue="0.16919812817258884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="0yy-yW-Rwg"/>
                     </constraints>
