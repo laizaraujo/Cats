@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import Alamofire
+
+protocol BreedApiClientProtocol {
+    func listBreeds(completion: @escaping (Result<[Breed], Error>) -> Void)
+}
+
+class BreedApiClient: ApiClient, BreedApiClientProtocol {
+    func listBreeds(completion: @escaping (Result<[Breed], Error>) -> Void) {
+        performRequest(route: BreedEndpoint.listBreeds, completion: completion)
+    }
+}
