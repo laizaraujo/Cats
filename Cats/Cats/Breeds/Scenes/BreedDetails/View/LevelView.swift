@@ -35,8 +35,8 @@ class LevelView: UIStackView {
     /// - Parameters:
     ///     - level: The intensity level of attribute
     func setIntensityLevel(level: Int) {
-        for i in level..<5 {
-            levelViews[i].alpha = 0.0
+        for i in 0..<5 {
+            levelViews[i].alpha = i <= level - 1 ? 1 : 0
         }
     }
 }
