@@ -1,5 +1,5 @@
 //
-//  UIImageView.swift
+//  UIImageViewExtension.swift
 //  Cats
 //
 //  Created by Laiza Souza on 20/08/20.
