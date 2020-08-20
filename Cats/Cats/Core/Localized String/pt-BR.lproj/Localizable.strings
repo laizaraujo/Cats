@@ -6,8 +6,8 @@
   Copyright © 2020 cats. All rights reserved.
 */
 
-"app_name" = "Cats";
-"affection_level" = "Affection Level";
-"child_friendly_level" = "Child Friendly Level";
-"energy_level" = "Energy Level";
-"adaptability_level" = "Adaptability Level";
+"app_name" = "Gatos";
+"affection_level" = "Nível de afeição";
+"child_friendly_level" = "Nível amigável com crianças";
+"energy_level" = "Nível de energia";
+"adaptability_level" = "Nível de adaptatividade";
