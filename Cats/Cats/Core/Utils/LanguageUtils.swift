@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+public class LanguageUtils {
+    public static func getLocalizedString(value: String) -> String {
+        let stringValue = Bundle.main.localizedString(forKey: value, value: nil, table: nil)
+        
+        return stringValue
+    }
+}
