@@ -6,4 +6,9 @@
 //  Copyright © 2020 cats. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol Coordinator {
+    func start()
+    func popView()
+}
