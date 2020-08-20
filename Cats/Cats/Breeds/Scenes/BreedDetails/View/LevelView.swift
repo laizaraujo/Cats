@@ -22,13 +22,9 @@ class LevelView: UIStackView {
         levelView.setIntensityLevel(level: level)
         
         superView.addSubview(levelView)
-        
-        levelView.translatesAutoresizingMaskIntoConstraints = false
-        levelView.leadingAnchor.constraint(equalTo: superView.leadingAnchor).isActive = true
-        levelView.trailingAnchor.constraint(equalTo: superView.trailingAnchor).isActive = true
-        levelView.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
-        levelView.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
-        
+        levelView.snp.makeConstraints { (make) in
+            make.edges.equalTo(superView)
+        }
     }
     
     /// Set intensity level

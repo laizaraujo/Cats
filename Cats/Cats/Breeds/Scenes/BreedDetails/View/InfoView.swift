@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class InfoView: UIStackView {
     
@@ -24,12 +25,9 @@ class InfoView: UIStackView {
         infoView.setInformation(level: level, attribute: attribute)
         
         superView.addSubview(infoView)
-        
-        infoView.translatesAutoresizingMaskIntoConstraints = false
-        infoView.leadingAnchor.constraint(equalTo: superView.leadingAnchor).isActive = true
-        infoView.trailingAnchor.constraint(equalTo: superView.trailingAnchor).isActive = true
-        infoView.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
-        infoView.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
+        infoView.snp.makeConstraints { (make) in
+            make.edges.equalTo(superView)
+        }
     }
     
     /// Set InfoView Information

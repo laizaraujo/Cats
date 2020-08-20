@@ -1,5 +1,5 @@
 //
-//  CustomLoad.swift
+//  CustomActivityIndicator.swift
 //  Cats
 //
 //  Created by Laiza Souza on 16/08/20.
@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-class CustomLoad {
+class CustomActivityIndicator: UIActivityIndicatorView {
     
 }

@@ -40,21 +40,20 @@ class BreedsListViewController: UIViewController {
     /// - Add collection constraints
     func initializeCollection() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-
         collection = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        
         collection.dataSource = self
         collection.delegate = self
 
         collection.register(UINib(nibName: "BreedsCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "breeds")
-        collection.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.137254902, blue: 0.1921568627, alpha: 1)
-        view.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.137254902, blue: 0.1921568627, alpha: 1)
-        view.addSubview(collection)
         
-        collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        collection.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        collection.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        collection.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true        
+        collection.backgroundColor = UIColor.Theme.primary
+        view.backgroundColor = UIColor.Theme.primary
+        
+        view.addSubview(collection)
+        collection.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
     }
     
     /// Closures initialization
@@ -138,16 +137,11 @@ extension BreedsListViewController {
         if load {
             view.addSubview(loadView)
             view.bringSubviewToFront(loadView)
-            loadView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-            loadView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-            loadView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-            loadView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+            loadView.snp.makeConstraints { (make) in
+                make.edges.equalTo(self.view)
+            }
         } else {
             loadView.removeFromSuperview()
-            loadView.topAnchor.constraint(equalTo: view.topAnchor).isActive = false
-            loadView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = false
-            loadView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = false
-            loadView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = false
         }
     }
 }
