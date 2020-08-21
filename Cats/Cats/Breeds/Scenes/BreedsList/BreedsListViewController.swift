@@ -108,7 +108,7 @@ extension BreedsListViewController: UICollectionViewDataSource {
             let breed = viewModel?.breeds[indexPath.row] else {
             return UICollectionViewCell()
         }
-        cell.viewModel.setBreedInformation(image: breed.getImageURL(), name: breed.name, origin: breed.origin)
+        cell.viewModel.setBreed(breed)
         return cell
     }
 }

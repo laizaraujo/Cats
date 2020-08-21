@@ -6,7 +6,6 @@
 //  Copyright © 2020 cats. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIView {

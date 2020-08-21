@@ -10,7 +10,7 @@ import Foundation
 
 protocol BreedsCollectionViewModelProtocol: class {
     var populateCell: ((URL?, String, String) -> Void)? { get set }
-    func setBreedInformation(image: URL?, name: String, origin: String)
+    func setBreed(_ breed: Breed)
 }
 
 class BreedsCollectionViewModel: BreedsCollectionViewModelProtocol {
@@ -18,10 +18,8 @@ class BreedsCollectionViewModel: BreedsCollectionViewModelProtocol {
     
     /// Set Breed information
     /// - Parameters:
-    ///     - image: The url that contains breed image
-    ///     - title: The breed name
-    ///     - subtitle: The breed origin
-    func setBreedInformation(image: URL?, name: String, origin: String) {
-        populateCell?(image, name, origin)
+    ///     - breed: The breed model
+    func setBreed(_ breed: Breed) {
+        populateCell?(breed.getImageURL(), breed.name, breed.origin)
     }
 }

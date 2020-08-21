@@ -18,10 +18,10 @@ extension UIImageView {
         
         af.setImage(withURL: imageUrl, placeholderImage: placeholderImage, imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false) { [weak self] response in
             switch response.result {
-                case .failure:
-                    self?.image = errorImage
-                case .success:
-                    break
+            case .failure:
+                self?.image = errorImage
+            case .success:
+                break
             }
         }
     }
