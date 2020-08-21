@@ -10,20 +10,35 @@ import UIKit
 
 class BreedDetailsViewController: UIViewController {
     var breed: Breed?
-    
+    var scroll = UIScrollView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.Theme.primary
         
+        initializeScroll()
+        
         guard let breed = breed else { return }
         
+        initializeDetail(breed: breed)
+    }
+    
+    private func initializeScroll() {
+        view.addSubview(scroll)
+        scroll.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
+    }
+    
+    private func initializeDetail(breed: Breed) {
         let detailsView: BreedDetailView = BreedDetailView.fromNib()
         detailsView.setInformation(breed: breed)
-        view.addSubview(detailsView)
+        scroll.addSubview(detailsView)
         
         detailsView.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.view)
+            make.edges.equalTo(self.scroll)
+            make.width.equalTo(self.view)
         }
     }
 

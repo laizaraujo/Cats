@@ -37,7 +37,6 @@ class BreedDetailView: UIView {
         originLabel.text = breed.origin
         temperamentLabel.text = breed.temperament
         descriptionLabel.text = breed.description
-                
         
         initInfoView(level: breed.affectionLevel, attribute: BreedStrings.affectionLevel.localizable, at: affectionView)
         initInfoView(level: breed.childFriendly, attribute: BreedStrings.childFriendlyLevel.localizable, at: childFriendlyView)
@@ -45,7 +44,7 @@ class BreedDetailView: UIView {
         initInfoView(level: breed.adaptability, attribute: BreedStrings.adaptabilityLevel.localizable, at: adaptabilityView)
     }
     
-    func initInfoView(level: Int, attribute: String, at view: UIView) {
+    private func initInfoView(level: Int, attribute: String, at view: UIView) {
         let infoView: InfoView = InfoView.fromNib()
         infoView.setInformation(level: level, attribute: attribute)
 
