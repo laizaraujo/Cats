@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class LanguageUtils {
     public static func getLocalizedString(value: String) -> String {
@@ -14,4 +15,17 @@ public class LanguageUtils {
         
         return stringValue
     }
+}
+
+enum BreedStrings: String {
+    case appName = "app_name"
+    case affectionLevel = "affection_level"
+    case childFriendlyLevel = "child_friendly_level"
+    case energyLevel = "energy_level"
+    case adaptabilityLevel = "adaptability_level"
+    
+    var localizable: String {
+        return LanguageUtils.getLocalizedString(value: rawValue)
+    }
+
 }

@@ -60,16 +60,16 @@ class BreedDetailView: UIView {
         
         InfoView.display(at: affectionView,
                          with: breed.affectionLevel,
-                         for: LanguageUtils.getLocalizedString(value: "affection_level"))
+                         for: BreedStrings.affectionLevel.localizable)
         InfoView.display(at: childFriendlyView,
                          with: breed.childFriendly,
-                         for: LanguageUtils.getLocalizedString(value: "child_friendly_level"))
+                         for: BreedStrings.childFriendlyLevel.localizable)
         InfoView.display(at: energyLevelView,
                          with: breed.energyLevel,
-                         for: LanguageUtils.getLocalizedString(value: "energy_level"))
+                         for: BreedStrings.energyLevel.localizable)
         InfoView.display(at: adaptabilityView,
                          with: breed.adaptability,
-                         for: LanguageUtils.getLocalizedString(value: "adaptability_level"))
+                         for: BreedStrings.adaptabilityLevel.localizable)
     }
     
     private func setLayout() {
