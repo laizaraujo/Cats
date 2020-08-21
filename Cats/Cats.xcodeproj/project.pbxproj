@@ -138,6 +138,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A7B6897024EF469300C23960 /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				A7B6897124EF46BB00C23960 /* ViewModel */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		A7B6897124EF46BB00C23960 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A7DB615924E82B23002E38C1 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +190,7 @@
 		A7DB617B24E82B26002E38C1 /* CatsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A7B6897024EF469300C23960 /* Breeds */,
 				A7DB617C24E82B26002E38C1 /* CatsTests.swift */,
 				A7DB617E24E82B26002E38C1 /* Info.plist */,
 			);
@@ -356,6 +372,7 @@
 				A7DB617424E82B26002E38C1 /* Sources */,
 				A7DB617524E82B26002E38C1 /* Frameworks */,
 				A7DB617624E82B26002E38C1 /* Resources */,
+				246137C07F233AAA56DCA467 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -431,6 +448,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		246137C07F233AAA56DCA467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatsTests/Pods-CatsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatsTests/Pods-CatsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatsTests/Pods-CatsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8D8906EDE610563251A7C13C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
