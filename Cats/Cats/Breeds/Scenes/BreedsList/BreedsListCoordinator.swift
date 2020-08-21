@@ -48,6 +48,7 @@ class BreedsListCoordinator: Coordinator {
     }
 }
 
+// MARK: BreedsListViewControllerProtocol
 extension BreedsListCoordinator: BreedsListViewControllerProtocol {
     /// Start BreedDetailsCoordinator
     /// - Parameters:

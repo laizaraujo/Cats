@@ -67,6 +67,7 @@ class BreedsListViewController: UIViewController {
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
 extension BreedsListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
@@ -84,6 +85,7 @@ extension BreedsListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: UICollectionViewDelegate
 extension BreedsListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let breed = viewModel?.breeds[indexPath.row] else { return }
@@ -91,6 +93,7 @@ extension BreedsListViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: UICollectionViewDataSource
 extension BreedsListViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
