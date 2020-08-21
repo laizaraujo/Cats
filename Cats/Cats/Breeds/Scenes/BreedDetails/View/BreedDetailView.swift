@@ -22,26 +22,6 @@ class BreedDetailView: UIView {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var adaptabilityView: UIView!
     
-    let loadView: UIActivityIndicatorView = {
-        let loader = UIActivityIndicatorView(style: .large)
-        loader.backgroundColor = .clear
-        loader.color = .white
-        loader.translatesAutoresizingMaskIntoConstraints = false
-        loader.startAnimating()
-        return loader
-    }()
-    
-    /// Display BreedDetailView
-    /// - Parameters:
-    ///     - superView: The view where BreedDetailView should be displayed
-    ///     - breed: The Breed object to be shown
-    static func display(at superView: UIView,  with breed: Breed) {
-        let detail: BreedDetailView = BreedDetailView.fromNib()
-        detail.setInformation(breed: breed)
-        
-        superView.addSubview(detail)
-    }
-    
     /// Set BreedDetailView Layout
     /// - Parameters:
     ///     - breed: Breed object to show details
@@ -57,19 +37,22 @@ class BreedDetailView: UIView {
         originLabel.text = breed.origin
         temperamentLabel.text = breed.temperament
         descriptionLabel.text = breed.description
+                
         
-        InfoView.display(at: affectionView,
-                         with: breed.affectionLevel,
-                         for: BreedStrings.affectionLevel.localizable)
-        InfoView.display(at: childFriendlyView,
-                         with: breed.childFriendly,
-                         for: BreedStrings.childFriendlyLevel.localizable)
-        InfoView.display(at: energyLevelView,
-                         with: breed.energyLevel,
-                         for: BreedStrings.energyLevel.localizable)
-        InfoView.display(at: adaptabilityView,
-                         with: breed.adaptability,
-                         for: BreedStrings.adaptabilityLevel.localizable)
+        initInfoView(level: breed.affectionLevel, attribute: BreedStrings.affectionLevel.localizable, at: affectionView)
+        initInfoView(level: breed.childFriendly, attribute: BreedStrings.childFriendlyLevel.localizable, at: childFriendlyView)
+        initInfoView(level: breed.energyLevel, attribute: BreedStrings.energyLevel.localizable, at: energyLevelView)
+        initInfoView(level: breed.adaptability, attribute: BreedStrings.adaptabilityLevel.localizable, at: adaptabilityView)
+    }
+    
+    func initInfoView(level: Int, attribute: String, at view: UIView) {
+        let infoView: InfoView = InfoView.fromNib()
+        infoView.setInformation(level: level, attribute: attribute)
+
+        view.addSubview(infoView)
+        infoView.snp.makeConstraints { (make) in
+            make.edges.equalTo(view)
+        }
     }
     
     private func setLayout() {

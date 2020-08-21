@@ -15,21 +15,6 @@ class InfoView: UIStackView {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var infoLevel: UIView!
     
-    /// Display InfoView
-    /// - Parameters:
-    ///     - superView: View where InfoView will be displayed
-    ///     - level: The intensity level of attribute
-    ///     - attribute: The attribute name
-    static func display(at superView: UIView, with level: Int, for attribute: String) {
-        let infoView: InfoView = InfoView.fromNib()
-        infoView.setInformation(level: level, attribute: attribute)
-        
-        superView.addSubview(infoView)
-        infoView.snp.makeConstraints { (make) in
-            make.edges.equalTo(superView)
-        }
-    }
-    
     /// Set InfoView Information
     /// - Parameters:
     ///     - level:The intensity level of attribute
@@ -37,7 +22,13 @@ class InfoView: UIStackView {
     func setInformation(level: Int, attribute: String) {
         setLayout()
         infoLabel.text = attribute
-        LevelView.display(at: infoLevel, with: level)
+        let levelView: LevelView = LevelView.fromNib()
+        levelView.setIntensityLevel(level: level)
+        
+        infoLevel.addSubview(levelView)
+        levelView.snp.makeConstraints { (make) in
+            make.edges.equalTo(infoLevel)
+        }
     }
     
     private func setLayout() {

@@ -17,7 +17,14 @@ class BreedDetailsViewController: UIViewController {
         view.backgroundColor = UIColor.Theme.primary
         
         guard let breed = breed else { return }
-        BreedDetailView.display(at: view, with: breed)
+        
+        let detailsView: BreedDetailView = BreedDetailView.fromNib()
+        detailsView.setInformation(breed: breed)
+        view.addSubview(detailsView)
+        
+        detailsView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
     }
 
 }

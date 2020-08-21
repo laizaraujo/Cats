@@ -12,20 +12,6 @@ import UIKit
 class LevelView: UIStackView {
     
     @IBOutlet var levelViews: [UIView]!
-        
-    /// Display LevelView
-    /// - Parameters:
-    ///     - superView: View where InfoView will be displayed
-    ///     - level: The intensity level of attribute
-    static func display(at superView: UIView, with level: Int) {
-        let levelView: LevelView = LevelView.fromNib()
-        levelView.setIntensityLevel(level: level)
-        
-        superView.addSubview(levelView)
-        levelView.snp.makeConstraints { (make) in
-            make.edges.equalTo(superView)
-        }
-    }
     
     /// Set intensity level
     /// - Parameters:
