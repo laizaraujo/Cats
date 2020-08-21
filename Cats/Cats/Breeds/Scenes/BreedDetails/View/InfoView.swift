@@ -35,7 +35,12 @@ class InfoView: UIStackView {
     ///     - level:The intensity level of attribute
     ///     - attribute: The attribute name
     func setInformation(level: Int, attribute: String) {
+        setLayout()
         infoLabel.text = attribute
         LevelView.display(at: infoLevel, with: level)
+    }
+    
+    private func setLayout() {
+        infoLabel.textColor = UIColor.Theme.secondary0
     }
 }

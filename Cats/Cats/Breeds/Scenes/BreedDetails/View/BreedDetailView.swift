@@ -37,7 +37,7 @@ class BreedDetailView: UIView {
     ///     - breed: The Breed object to be shown
     static func display(at superView: UIView,  with breed: Breed) {
         let detail: BreedDetailView = BreedDetailView.fromNib()
-        detail.setLayout(breed: breed)
+        detail.setInformation(breed: breed)
         
         superView.addSubview(detail)
     }
@@ -45,7 +45,8 @@ class BreedDetailView: UIView {
     /// Set BreedDetailView Layout
     /// - Parameters:
     ///     - breed: Breed object to show details
-    func setLayout(breed: Breed) {
+    func setInformation(breed: Breed) {
+        setLayout()
         if let imageURL = breed.getImageURL() {
             let placeholder = UIImage(named: "cat_placeholder") ?? UIImage()
             let error = UIImage(named: "error_placeholder") ?? UIImage()
@@ -70,4 +71,12 @@ class BreedDetailView: UIView {
                          with: breed.adaptability,
                          for: LanguageUtils.getLocalizedString(value: "adaptability_level"))
     }
+    
+    private func setLayout() {
+        nameLabel.textColor = UIColor.Theme.secondary0
+        originLabel.textColor = UIColor.Theme.secondary0
+        temperamentLabel.textColor = UIColor.Theme.secondary0
+        descriptionLabel.textColor = UIColor.Theme.secondary0
+    }
+    
 }

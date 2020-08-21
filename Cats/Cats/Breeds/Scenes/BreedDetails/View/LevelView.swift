@@ -35,4 +35,5 @@ class LevelView: UIStackView {
             levelViews[i].alpha = i <= level - 1 ? 1 : 0
         }
     }
+
 }
