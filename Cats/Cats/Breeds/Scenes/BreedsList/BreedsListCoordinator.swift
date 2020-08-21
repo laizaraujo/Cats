@@ -26,7 +26,7 @@ class BreedsListCoordinator: Coordinator {
     /// - remove shadow image
     func setNavigationBarLayout() {
         presenter.navigationBar.barTintColor = UIColor.Theme.primary
-        presenter.navigationBar.tintColor = .white
+        presenter.navigationBar.tintColor = UIColor.Theme.secondary0
         presenter.navigationBar.isTranslucent = false
         presenter.navigationBar.shadowImage = UIImage()
     }

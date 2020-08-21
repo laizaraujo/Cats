@@ -29,6 +29,8 @@ class BreedsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = BreedStrings.appName.localizable
+
         initializeCollection()
         initializeClosures()
         viewModel?.loadBreeds()

@@ -21,6 +21,7 @@ class BreedDetailsViewController: UIViewController {
         
         guard let breed = breed else { return }
         
+        title = breed.name
         initializeDetail(breed: breed)
     }
     

@@ -36,7 +36,6 @@
 		A7DB61D724E98527002E38C1 /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DB61D624E98527002E38C1 /* BreedDetailView.swift */; };
 		A7DB61D924E9A054002E38C1 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7DB61D824E9A054002E38C1 /* InfoView.xib */; };
 		A7DB61DB24E9A061002E38C1 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DB61DA24E9A061002E38C1 /* InfoView.swift */; };
-		A7DB61E024E9E5D9002E38C1 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DB61DF24E9E5D9002E38C1 /* CustomActivityIndicator.swift */; };
 		A7E1181C24EEEA7B00F9C626 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1181B24EEEA7B00F9C626 /* UIColorExtension.swift */; };
 		A7E1181F24EF028100F9C626 /* LanguageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1181E24EF028100F9C626 /* LanguageUtils.swift */; };
 		C82AD6F871003F11B08C8896 /* Pods_Cats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09278F3A9F0CBF136927CFE0 /* Pods_Cats.framework */; };
@@ -95,7 +94,6 @@
 		A7DB61D624E98527002E38C1 /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
 		A7DB61D824E9A054002E38C1 /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
 		A7DB61DA24E9A061002E38C1 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		A7DB61DF24E9E5D9002E38C1 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		A7E1181B24EEEA7B00F9C626 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A7E1181E24EF028100F9C626 /* LanguageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,7 +205,6 @@
 				A7DB618824E8306D002E38C1 /* API */,
 				A7DB61C424E976C5002E38C1 /* Coordinator */,
 				A7DB61AA24E86FB5002E38C1 /* Extensions */,
-				A7DB61DE24E9E5BA002E38C1 /* UIPatterns */,
 				A7E1181D24EF025700F9C626 /* Utils */,
 			);
 			path = Core;
@@ -318,14 +315,6 @@
 				A7DB61BE24E96D7B002E38C1 /* LevelView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		A7DB61DE24E9E5BA002E38C1 /* UIPatterns */ = {
-			isa = PBXGroup;
-			children = (
-				A7DB61DF24E9E5D9002E38C1 /* CustomActivityIndicator.swift */,
-			);
-			path = UIPatterns;
 			sourceTree = "<group>";
 		};
 		A7E1181D24EF025700F9C626 /* Utils */ = {
@@ -568,7 +557,6 @@
 				A7DB61BF24E96D7B002E38C1 /* LevelView.swift in Sources */,
 				A7DB61AC24E86FC7002E38C1 /* UIViewExtension+Nib.swift in Sources */,
 				A7DB61C324E976B2002E38C1 /* BreedsListCoordinator.swift in Sources */,
-				A7DB61E024E9E5D9002E38C1 /* CustomActivityIndicator.swift in Sources */,
 				A7DB61B224E870FC002E38C1 /* BreedsCollectionViewCell.swift in Sources */,
 				A7DB61A524E86E2C002E38C1 /* BreedsListViewModel.swift in Sources */,
 				A7DB61C824E978EB002E38C1 /* BreedDetailsCoordinator.swift in Sources */,
