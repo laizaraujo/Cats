@@ -24,9 +24,9 @@ class BreedsCollectionViewModelTests: QuickSpec {
             describe("set breed") {
                 it("calls the populate cell closure") {
                     // Arrange
-                    let breed = Breed(adaptability: 1, affectionLevel: 2, childFriendly: 3, description: "Description", dogFriendly: 4, energyLevel: 5, id: "asad", name: "Name", origin: "Origin", temperament: "Temperament")
+                    let breed = Breed(adaptability: 1, affectionLevel: 2, childFriendly: 3, description: "Description", dogFriendly: 4, energyLevel: 5, id: "asad", name: "Name", origin: "Origin", temperament: "Temperament", image: Image(url: URL(string: "https://domain.com/image.jpg")!, width: 100, height: 100))
                     
-                    var populateCellCalledWith: (URL?, String, String)? = nil
+                    var populateCellCalledWith: (Image?, String, String)? = nil
                     viewModel.populateCell = { (image, name, origin) in
                         populateCellCalledWith = (image, name, origin)
                     }
