@@ -11,3 +11,4 @@
 "child_friendly_level" = "Child Friendly Level";
 "energy_level" = "Energy Level";
 "adaptability_level" = "Adaptability Level";
+"loading_error" = "Could not load information";

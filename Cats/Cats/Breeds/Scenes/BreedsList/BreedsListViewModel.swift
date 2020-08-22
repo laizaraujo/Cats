@@ -46,7 +46,7 @@ class BreedsListViewModel: BreedsListViewModelProtocol {
             case .success(let breeds):
                 self?.loadImages(for: breeds)
             case .failure:
-                self?.displayError?("Could not load information")
+                self?.displayError?(BreedStrings.loadingError.localizable)
             }
         }
     }

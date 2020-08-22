@@ -11,3 +11,4 @@
 "child_friendly_level" = "Nível amigável com crianças";
 "energy_level" = "Nível de energia";
 "adaptability_level" = "Nível de adaptatividade";
+"loading_error" = "Não foi possível carregar as informações";

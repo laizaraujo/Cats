@@ -23,9 +23,9 @@ enum BreedStrings: String {
     case childFriendlyLevel = "child_friendly_level"
     case energyLevel = "energy_level"
     case adaptabilityLevel = "adaptability_level"
+    case loadingError = "loading_error"
     
     var localizable: String {
         return LanguageUtils.getLocalizedString(value: rawValue)
     }
-
 }
