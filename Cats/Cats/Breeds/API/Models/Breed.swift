@@ -19,32 +19,19 @@ struct Breed: Codable {
     let name: String
     let origin: String
     let temperament: String
+    var image: Image?
 
     enum CodingKeys: String, CodingKey {
-        case adaptability = "adaptability"
+        case adaptability
         case affectionLevel = "affection_level"
         case childFriendly = "child_friendly"
-        case description = "description"
+        case description
         case dogFriendly = "dog_friendly"
         case energyLevel = "energy_level"
-        case id = "id"
-        case name = "name"
-        case origin = "origin"
-        case temperament = "temperament"
-    }
-    
-    func getImageURL() -> URL? {
-        let url = "https://api.thecatapi.com/v1/images/search?breed_id=\(id)&format=src&size=small"
-        return URL(string: url)
-    }
-}
-
-struct Weight: Codable {
-    let imperial: String
-    let metric: String
-
-    enum CodingKeys: String, CodingKey {
-        case imperial
-        case metric
+        case id
+        case name
+        case origin
+        case temperament
+        case image
     }
 }

@@ -14,13 +14,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LZW-Js-Mya">
-                    <rect key="frame" x="0.0" y="44" width="414" height="240"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="233"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="240" id="sKd-bf-3cm"/>
+                        <constraint firstAttribute="width" secondItem="LZW-Js-Mya" secondAttribute="height" multiplier="16:9" id="G54-ms-QEo"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nk9-pd-kde">
-                    <rect key="frame" x="20" y="304" width="374" height="298.5"/>
+                    <rect key="frame" x="20" y="297" width="374" height="298.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqc-w6-qUE">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -91,6 +91,7 @@
             <connections>
                 <outlet property="adaptabilityView" destination="brE-BB-ctx" id="Smv-dg-SKb"/>
                 <outlet property="affectionView" destination="M00-gY-JXI" id="vlg-Cl-yWj"/>
+                <outlet property="aspectRatioConstraint" destination="G54-ms-QEo" id="CqK-Sp-GbC"/>
                 <outlet property="catImage" destination="LZW-Js-Mya" id="Z1U-21-kkO"/>
                 <outlet property="childFriendlyView" destination="e0k-8W-Pxc" id="Gwz-9W-cqJ"/>
                 <outlet property="descriptionLabel" destination="DUo-fV-EsG" id="OtH-24-9hz"/>

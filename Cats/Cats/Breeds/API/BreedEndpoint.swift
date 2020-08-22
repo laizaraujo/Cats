@@ -11,14 +11,17 @@ import Alamofire
 
 enum BreedEndpoint: ApiConfiguration {
     case listBreeds
+    case imageSearch(breedId: String)
     
     var baseUrl: String {
-        return "https://api.thecatapi.com/"
+        return "https://api.thecatapi.com/v1"
     }
     
     var method: HTTPMethod {
         switch self {
         case .listBreeds:
+            return .get
+        case .imageSearch:
             return .get
         }
     }
@@ -26,12 +29,19 @@ enum BreedEndpoint: ApiConfiguration {
     var path: String {
         switch self {
         case .listBreeds:
-            return "v1/breeds"
+            return "/breeds"
+        case .imageSearch:
+            return "/images/search"
         }
     }
     
     var parameters: Parameters? {
-        return nil
+        switch self {
+        case .imageSearch(let breedId):
+            return ["breed_id": breedId]
+        default:
+            return nil
+        }
     }
     
     var httpBody: Data? {

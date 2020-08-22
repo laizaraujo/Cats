@@ -10,18 +10,21 @@ import UIKit
 import AlamofireImage
 
 extension UIImageView {
-    func setImage(with url: URL?, placeholderImage: UIImage, errorImage: UIImage) {
+    func setImage(with url: URL?) {
+        let placeholder = UIImage(named: "cat_placeholder") ?? UIImage()
+
         guard let imageUrl = url else {
-            image = placeholderImage
             return
         }
         
-        af.setImage(withURL: imageUrl, placeholderImage: placeholderImage, imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false) { [weak self] response in
+        af.setImage(withURL: imageUrl, placeholderImage: placeholder, imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false) { [weak self] response in
             switch response.result {
-            case .failure:
-                self?.image = errorImage
-            case .success:
-                break
+            case .failure(let error):
+                if !error.isRequestCancelledError {
+                    self?.image = UIImage(named: "error_placeholder")
+                }
+            case .success(let image):
+                self?.image = image
             }
         }
     }

@@ -21,17 +21,24 @@ class BreedDetailView: UIView {
     @IBOutlet weak var energyLevelView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var adaptabilityView: UIView!
+    @IBOutlet weak var aspectRatioConstraint: NSLayoutConstraint!
     
     /// Set BreedDetailView Layout
     /// - Parameters:
     ///     - breed: Breed object to show details
     func setInformation(breed: Breed) {
         setLayout()
-        if let imageURL = breed.getImageURL() {
-            let placeholder = UIImage(named: "cat_placeholder") ?? UIImage()
-            let error = UIImage(named: "error_placeholder") ?? UIImage()
-            catImage.setImage(with: imageURL, placeholderImage: placeholder, errorImage: error)
+        
+        if let image = breed.image {
+            aspectRatioConstraint.isActive = false
+            
+            let aspectRatio = CGFloat(image.height) / CGFloat(image.width)
+            catImage.snp.makeConstraints { (make) in
+                make.height.equalTo(catImage.snp.width).multipliedBy(aspectRatio)
+            }
         }
+
+        catImage.setImage(with: breed.image?.url)
         
         nameLabel.text = breed.name
         originLabel.text = breed.origin

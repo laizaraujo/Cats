@@ -25,6 +25,12 @@ class BreedsListViewController: UIViewController {
         loader.startAnimating()
         return loader
     }()
+    var widthPerItem: CGFloat {
+        let paddingSpace = 10
+        let collums = 2
+        let availableWidth = UIScreen.main.bounds.width - CGFloat(paddingSpace * (collums + 1))
+        return availableWidth / CGFloat(collums)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +47,14 @@ class BreedsListViewController: UIViewController {
     /// - Register the collection cell
     /// - Add collection constraints
     func initializeCollection() {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let layout = UICollectionViewStackedLayout()
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collection = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         
         collection.dataSource = self
         collection.delegate = self
 
-        collection.register(UINib(nibName: "BreedsCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "breeds")
+        collection.register(UINib(nibName: "BreedsCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: BreedsCollectionViewCell.reuseIdentifier)
         
         collection.backgroundColor = UIColor.Theme.primary
         view.backgroundColor = UIColor.Theme.primary
@@ -71,17 +78,6 @@ class BreedsListViewController: UIViewController {
 
 // MARK: UICollectionViewDelegateFlowLayout
 extension BreedsListViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        let paddingSpace = 10
-        let collums = 2
-        let availableWidth = Int(UIScreen.main.bounds.width) - (paddingSpace * (collums + 1))
-
-        let widthPerItem  = availableWidth/collums
-
-        return CGSize(width: CGFloat(widthPerItem), height: CGFloat(widthPerItem))
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
     }
@@ -106,11 +102,14 @@ extension BreedsListViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collection.dequeueReusableCell(withReuseIdentifier: "breeds", for: indexPath) as? BreedsCollectionViewCell,
+        guard let cell = collection.dequeueReusableCell(withReuseIdentifier: BreedsCollectionViewCell.reuseIdentifier, for: indexPath) as? BreedsCollectionViewCell,
             let breed = viewModel?.breeds[indexPath.row] else {
             return UICollectionViewCell()
         }
+        
+        cell.widthConstraint.constant = widthPerItem
         cell.viewModel.setBreed(breed)
+        
         return cell
     }
 }

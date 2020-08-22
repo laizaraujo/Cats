@@ -24,6 +24,7 @@ class BreedsListViewModel: BreedsListViewModelProtocol {
             breedsUpdated?()
         }
     }
+    
     var breedsUpdated: (() -> Void)?
     var displayError: ((String) -> Void)?
     var showLoading: ((Bool) -> Void)?
@@ -40,14 +41,31 @@ class BreedsListViewModel: BreedsListViewModelProtocol {
     ///     On Failure: show failure alert
     func loadBreeds() {
         showLoading?(true)
-        api.listBreeds { [weak self] (result) in
+        api.listBreeds { [weak self] result in
             self?.showLoading?(false)
             switch result {
             case .success(let breeds):
-                self?.breeds = breeds
+                self?.loadImages(for: breeds)
             case .failure:
                 self?.displayError?("Could not load information")
             }
+        }
+    }
+
+    private func loadImages(for breeds: [Breed]) {
+        var breedsWithImages = breeds
+        let dispatchGroup = DispatchGroup()
+
+        breeds.enumerated().forEach { item in
+            dispatchGroup.enter()
+            api.imageSearch(breedId: item.element.id) { result in
+                breedsWithImages[item.offset].image = try? result.get().first
+                dispatchGroup.leave()
+            }
+        }
+
+        dispatchGroup.notify(queue: .main) { [weak self] in
+            self?.breeds = breedsWithImages
         }
     }
 }
