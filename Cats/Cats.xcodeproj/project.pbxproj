@@ -40,6 +40,8 @@
 		A7E1181C24EEEA7B00F9C626 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1181B24EEEA7B00F9C626 /* UIColorExtension.swift */; };
 		A7E1181F24EF028100F9C626 /* LanguageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1181E24EF028100F9C626 /* LanguageUtils.swift */; };
 		A7EDEA9B24F08F3500247DF9 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EDEA9A24F08F3500247DF9 /* Image.swift */; };
+		A7EDEA9E24F0A63D00247DF9 /* loader-light.json in Resources */ = {isa = PBXBuildFile; fileRef = A7EDEA9D24F0A63D00247DF9 /* loader-light.json */; };
+		A7EDEAA024F0AB2200247DF9 /* loader-dark.json in Resources */ = {isa = PBXBuildFile; fileRef = A7EDEA9F24F0AB2200247DF9 /* loader-dark.json */; };
 		C82AD6F871003F11B08C8896 /* Pods_Cats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09278F3A9F0CBF136927CFE0 /* Pods_Cats.framework */; };
 		E2EEB690B9C9B9E8E2EB286C /* Pods_CatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB03A8A48F5DCE47BD35062 /* Pods_CatsTests.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +102,8 @@
 		A7E1181B24EEEA7B00F9C626 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A7E1181E24EF028100F9C626 /* LanguageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageUtils.swift; sourceTree = "<group>"; };
 		A7EDEA9A24F08F3500247DF9 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		A7EDEA9D24F0A63D00247DF9 /* loader-light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loader-light.json"; sourceTree = "<group>"; };
+		A7EDEA9F24F0AB2200247DF9 /* loader-dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loader-dark.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				A7E1182024EF033600F9C626 /* Localized String */,
+				A7EDEA9C24F0A62F00247DF9 /* Animation */,
 				A7DB618824E8306D002E38C1 /* API */,
 				A7DB61C424E976C5002E38C1 /* Coordinator */,
 				A7DB61AA24E86FB5002E38C1 /* Extensions */,
@@ -347,6 +352,15 @@
 			path = "Localized String";
 			sourceTree = "<group>";
 		};
+		A7EDEA9C24F0A62F00247DF9 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A7EDEA9D24F0A63D00247DF9 /* loader-light.json */,
+				A7EDEA9F24F0AB2200247DF9 /* loader-dark.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -436,7 +450,9 @@
 			files = (
 				A7DB61D924E9A054002E38C1 /* InfoView.xib in Resources */,
 				A7DB617224E82B25002E38C1 /* LaunchScreen.storyboard in Resources */,
+				A7EDEAA024F0AB2200247DF9 /* loader-dark.json in Resources */,
 				A7DB61D424E9847A002E38C1 /* BreedDetailView.xib in Resources */,
+				A7EDEA9E24F0A63D00247DF9 /* loader-light.json in Resources */,
 				A7DB616F24E82B25002E38C1 /* Assets.xcassets in Resources */,
 				A7B6896824EF1ECC00C23960 /* Localizable.strings in Resources */,
 				A7DB61C124E96D8A002E38C1 /* LevelView.xib in Resources */,

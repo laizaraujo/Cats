@@ -6,6 +6,7 @@
 //  Copyright © 2020 cats. All rights reserved.
 //
 
+import Lottie
 import UIKit
 
 protocol BreedsListViewControllerProtocol {
@@ -17,14 +18,16 @@ class BreedsListViewController: UIViewController {
     var viewModel: BreedsListViewModelProtocol? = BreedsListViewModel()
     var delegate: BreedsListViewControllerProtocol?
     var collection: UICollectionView!
-    let loadView: UIActivityIndicatorView = {
-        let loader = UIActivityIndicatorView(style: .large)
-        loader.backgroundColor = .clear
-        loader.color = .white
-        loader.translatesAutoresizingMaskIntoConstraints = false
-        loader.startAnimating()
-        return loader
+    
+    private var loadingView: AnimationView = {
+        let name = UIScreen.main.traitCollection.userInterfaceStyle == .dark ? "loader-dark" : "loader-light"
+        let animation = Lottie.AnimationView(name: name)
+        animation.loopMode = .loop
+        animation.translatesAutoresizingMaskIntoConstraints = false
+        animation.contentMode = .scaleToFill
+        return animation
     }()
+
     var widthPerItem: CGFloat {
         let paddingSpace = 10
         let collums = 2
@@ -139,13 +142,18 @@ extension BreedsListViewController {
     /// Add load view and it's constraints
     func showLoading(_ load: Bool) {
         if load {
-            view.addSubview(loadView)
-            view.bringSubviewToFront(loadView)
-            loadView.snp.makeConstraints { (make) in
-                make.edges.equalTo(self.view)
+            view.addSubview(loadingView)
+            view.bringSubviewToFront(loadingView)
+            loadingView.snp.makeConstraints { (make) in
+                make.centerX.equalTo(self.view.snp.centerX)
+                make.centerY.equalTo(self.view.snp.centerY)
+                make.width.equalTo(280)
+                make.height.equalTo(200)
             }
+            loadingView.play()
         } else {
-            loadView.removeFromSuperview()
+            loadingView.stop()
+            loadingView.removeFromSuperview()
         }
     }
 }

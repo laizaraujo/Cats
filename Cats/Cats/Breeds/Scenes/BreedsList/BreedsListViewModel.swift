@@ -42,7 +42,6 @@ class BreedsListViewModel: BreedsListViewModelProtocol {
     func loadBreeds() {
         showLoading?(true)
         api.listBreeds { [weak self] result in
-            self?.showLoading?(false)
             switch result {
             case .success(let breeds):
                 self?.loadImages(for: breeds)
@@ -66,6 +65,7 @@ class BreedsListViewModel: BreedsListViewModelProtocol {
 
         dispatchGroup.notify(queue: .main) { [weak self] in
             self?.breeds = breedsWithImages
+            self?.showLoading?(false)
         }
     }
 }
