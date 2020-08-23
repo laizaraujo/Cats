@@ -50,10 +50,7 @@ class BreedsListViewController: UIViewController {
         viewModel?.loadBreeds()
     }
     
-    /// Collection initialization
-    /// - Set collection delegate, data source and layout
-    /// - Register the collection cell
-    /// - Add collection constraints
+    /// Collection initialization, registering the cell and setting it's data source, delegate and flow layout
     private func initializeCollection() {
         let layout = UICollectionViewStackedLayout()
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -114,7 +111,6 @@ extension BreedsListViewController: UICollectionViewDataSource {
 
 extension BreedsListViewController {
     /// Updates breeds information
-    /// Reload collection data
     func breedsUpdated() {
         collection.reloadData()
     }
@@ -133,8 +129,7 @@ extension BreedsListViewController {
     
     /// Shows loading
     /// - Parameters:
-    ///     - load: A Bool that defines wheter the loadind should be showned
-    /// Add load view and it's constraints
+    ///     - load: Defines wheter the loadind should be showned
     func showLoading(_ load: Bool) {
         if load {
             view.addSubview(loadingView)

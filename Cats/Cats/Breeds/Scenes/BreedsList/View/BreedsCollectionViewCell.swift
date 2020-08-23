@@ -32,11 +32,11 @@ class BreedsCollectionViewCell: UICollectionViewCell {
     }
     
     /// Closure initialization
-    /// - populateCell method
     func initializeClosures() {
         viewModel.populateCell = populateCell(image:title:subtitle:)
     }
     
+    /// Sets the cell style
     private func setCellStyle() {
         layer.cornerRadius = 5
 

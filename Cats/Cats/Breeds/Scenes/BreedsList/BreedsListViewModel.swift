@@ -51,6 +51,7 @@ class BreedsListViewModel: BreedsListViewModelProtocol {
         }
     }
 
+    /// Load all the images os the breeds list
     private func loadImages(for breeds: [Breed]) {
         var breedsWithImages = breeds
         let dispatchGroup = DispatchGroup()

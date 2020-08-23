@@ -20,10 +20,6 @@ class BreedsListCoordinator: Coordinator {
     }
     
     /// Sets the  navigation bar style
-    /// - background color
-    /// - tint color
-    /// - traslucid
-    /// - remove shadow image
     func setNavigationBarLayout() {
         presenter.navigationBar.barTintColor = UIColor.Theme.primary
         presenter.navigationBar.tintColor = UIColor.Theme.secondary0
@@ -32,9 +28,6 @@ class BreedsListCoordinator: Coordinator {
     }
     
     /// Start BreedsViewController
-    /// - initialize controller
-    /// - set its delegate
-    /// - push controller
     func start() {
         let viewController = BreedsListViewController()
         viewController.viewModel = BreedsListViewModel()
@@ -43,7 +36,6 @@ class BreedsListCoordinator: Coordinator {
     }
     
     /// Remove BreedsViewController
-    /// - pop controller
     func popView() {
         presenter.popViewController(animated: true)
     }

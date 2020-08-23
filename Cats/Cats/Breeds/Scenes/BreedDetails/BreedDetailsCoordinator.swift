@@ -22,9 +22,6 @@ class BreedDetailsCoordinator: Coordinator {
     }
     
     /// Start BreedDetailsViewController
-    /// - initialize controller
-    /// - set controller breed object
-    /// - push controller
     func start() {
         let viewController = BreedDetailsViewController()
         viewController.breed = breed
@@ -32,7 +29,6 @@ class BreedDetailsCoordinator: Coordinator {
     }
     
     /// Remove BreedDetailsViewController
-    /// - pop controller
     func popView() {
         presenter.popViewController(animated: true)
     }

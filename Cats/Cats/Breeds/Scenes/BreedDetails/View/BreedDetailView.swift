@@ -45,13 +45,18 @@ class BreedDetailView: UIView {
         temperamentLabel.text = breed.temperament
         descriptionLabel.text = breed.description
         
-        initInfoView(level: breed.affectionLevel, attribute: BreedStrings.affectionLevel.localizable, at: affectionView)
-        initInfoView(level: breed.childFriendly, attribute: BreedStrings.childFriendlyLevel.localizable, at: childFriendlyView)
-        initInfoView(level: breed.energyLevel, attribute: BreedStrings.energyLevel.localizable, at: energyLevelView)
-        initInfoView(level: breed.adaptability, attribute: BreedStrings.adaptabilityLevel.localizable, at: adaptabilityView)
+        insertInfoView(level: breed.affectionLevel, attribute: BreedStrings.affectionLevel.localizable, at: affectionView)
+        insertInfoView(level: breed.childFriendly, attribute: BreedStrings.childFriendlyLevel.localizable, at: childFriendlyView)
+        insertInfoView(level: breed.energyLevel, attribute: BreedStrings.energyLevel.localizable, at: energyLevelView)
+        insertInfoView(level: breed.adaptability, attribute: BreedStrings.adaptabilityLevel.localizable, at: adaptabilityView)
     }
     
-    private func initInfoView(level: Int, attribute: String, at view: UIView) {
+    /// Initialize the InfoView to show attribute
+    /// - Parameters:
+    ///     - level: The level of intensity
+    ///     - attribute: The attribute name
+    ///     - view: View where the component should be inserted
+    private func insertInfoView(level: Int, attribute: String, at view: UIView) {
         let infoView: InfoView = InfoView.fromNib()
         infoView.setInformation(level: level, attribute: attribute)
 
@@ -61,6 +66,7 @@ class BreedDetailView: UIView {
         }
     }
     
+    /// Sets the view elements layout
     private func setLayout() {
         nameLabel.textColor = UIColor.Theme.secondary0
         originLabel.textColor = UIColor.Theme.secondary0

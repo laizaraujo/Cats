@@ -31,6 +31,7 @@ class InfoView: UIStackView {
         }
     }
     
+    /// Sets elements layout
     private func setLayout() {
         infoLabel.textColor = UIColor.Theme.secondary0
     }

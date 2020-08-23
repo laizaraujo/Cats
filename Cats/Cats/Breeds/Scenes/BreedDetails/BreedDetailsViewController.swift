@@ -25,6 +25,7 @@ class BreedDetailsViewController: UIViewController {
         initializeDetail(breed: breed)
     }
     
+    /// Insert scrollView to controller
     private func initializeScroll() {
         view.addSubview(scroll)
         scroll.snp.makeConstraints { (make) in
@@ -32,6 +33,7 @@ class BreedDetailsViewController: UIViewController {
         }
     }
     
+    /// Initialize the BreedDetailView information and insert it in the scroll
     private func initializeDetail(breed: Breed) {
         let detailsView: BreedDetailView = BreedDetailView.fromNib()
         detailsView.setInformation(breed: breed)
