@@ -15,7 +15,13 @@ protocol BreedsListViewControllerProtocol {
 
 class BreedsListViewController: UIViewController {
     
-    var viewModel: BreedsListViewModelProtocol? = BreedsListViewModel()
+    var viewModel: BreedsListViewModelProtocol? {
+        didSet {
+            viewModel?.breedsUpdated = breedsUpdated
+            viewModel?.displayError = displayError(message:)
+            viewModel?.showLoading = showLoading(_:)
+        }
+    }
     var delegate: BreedsListViewControllerProtocol?
     var collection: UICollectionView!
     
@@ -41,7 +47,6 @@ class BreedsListViewController: UIViewController {
         title = BreedStrings.appName.localizable
 
         initializeCollection()
-        initializeClosures()
         viewModel?.loadBreeds()
     }
     
@@ -49,7 +54,7 @@ class BreedsListViewController: UIViewController {
     /// - Set collection delegate, data source and layout
     /// - Register the collection cell
     /// - Add collection constraints
-    func initializeCollection() {
+    private func initializeCollection() {
         let layout = UICollectionViewStackedLayout()
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collection = UICollectionView(frame: view.frame, collectionViewLayout: layout)
@@ -66,16 +71,6 @@ class BreedsListViewController: UIViewController {
         collection.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
-    }
-    
-    /// Closures initialization
-    /// - breeds update method
-    /// - display error methos
-    /// - show loading method
-    func initializeClosures() {
-        viewModel?.breedsUpdated = breedsUpdated
-        viewModel?.displayError = displayError(message:)
-        viewModel?.showLoading = showLoading(_:)
     }
 }
 

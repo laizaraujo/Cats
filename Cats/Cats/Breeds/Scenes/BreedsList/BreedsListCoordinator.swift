@@ -37,6 +37,7 @@ class BreedsListCoordinator: Coordinator {
     /// - push controller
     func start() {
         let viewController = BreedsListViewController()
+        viewController.viewModel = BreedsListViewModel()
         viewController.delegate = self
         presenter.pushViewController(viewController, animated: true)
     }

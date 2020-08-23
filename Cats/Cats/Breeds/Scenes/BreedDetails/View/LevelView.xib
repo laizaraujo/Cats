@@ -29,21 +29,21 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dew-Db-kz9">
                     <rect key="frame" x="80" y="0.0" width="40" height="20"/>
-                    <color key="backgroundColor" red="0.20000000000000001" green="0.22352941176470587" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.36944431918593551" green="0.45452253342937143" blue="0.62668543781725883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="gMS-lF-Npz"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-6u-RMp">
                     <rect key="frame" x="120" y="0.0" width="40" height="20"/>
-                    <color key="backgroundColor" red="0.15686274509803921" green="0.1764705882352941" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.29855524815120815" green="0.36768657137927774" blue="0.48495003172588835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="WLS-4y-GqM"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sW5-zW-erS">
                     <rect key="frame" x="160" y="0.0" width="40" height="20"/>
-                    <color key="backgroundColor" red="0.13725490196078433" green="0.14509803921568626" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.19562290076811364" green="0.27414447277532572" blue="0.36391576776649748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="0yy-yW-Rwg"/>
                     </constraints>

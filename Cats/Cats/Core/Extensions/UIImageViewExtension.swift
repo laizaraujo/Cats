@@ -14,6 +14,7 @@ extension UIImageView {
         let placeholder = UIImage(named: "cat_placeholder") ?? UIImage()
 
         guard let imageUrl = url else {
+            image = placeholder
             return
         }
         
